@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+int yer,a, day = 0;
+cout<<"Enter a year :";
+cin>> yer;
+	
+	//Counting total number of days
+	for(a = 1; a < yer; a++)
+	{
+		if(a % 4 == 0)//366 days if a leap year
+			day = day + 366;
+		else
+			day = day + 365;
+	}
+	
+	day = day % 7;
+	
+	if(day == 1)
+		cout<< "Itll be Monday on 01/01" << yer;
+	if(day == 2)
+		cout<< "Itll be Tuesday on 01/01/" << yer;
+	if(day == 3)
+			cout<< "Itll be Wednesday on 01/01/" << yer;
+	if(day == 4)
+			cout<< "Itll be Thursday on 01/01/" << yer;
+	if(day == 5)
+			cout<< "Itll be Friday on 01/01/" << yer;
+	if(day == 6)
+			cout<< "Itll be Saturday on 01/01/" << yer;
+	if(day == 0)
+		cout<< "Itll be Sunday on 01/01/" << yer;
+		
+
+	return 0;
+}   
