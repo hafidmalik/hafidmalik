@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+
+	float r,x,y;
+	
+	cout<<"Enter the radius of the circle : ";
+	cin>>r;
+	
+	cout<<"\n\nEnter the x-y coordinates of the point for checking it's position : ";
+	cin>>x>>y;
+	
+	if(r > sqrt(pow(x,2) + pow(y,2)))
+		cout<<"\n\nThe point lies inside the circle.";
+	else if(r == sqrt(pow(x,2) + pow(y,2)))
+		cout<<"\n\nThe point lies on the circle.";
+	else
+		cout<<"\n\nThe point lie outside the circle.";
+		
+}
