@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    
+	int x, min, max ;
+	
+	cin>> max>>x ;
+	x = (x > max ? max : min);
+    
+}
