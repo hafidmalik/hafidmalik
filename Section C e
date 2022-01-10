@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+int num,a,b,c,d,e,x;
+	
+	cout<<"Enter a five digit number :";
+	cin >> num;
+	//separat ing digits of the number
+	e = num % 10;   //3
+	d = (num/10) % 10;  // 7
+	c = (num/100) % 10; // 9
+	b = (num/1000) % 10; //8
+	a = (num/10000);  //1
+	
+	//reversing the number
+	x = e*10000 + d*1000 + c*100 + b*10 + a;
+	cout<<x;
+	
+	if(x == num)
+		cout<<"\n\nThe reverse of the number is same as actual number.";
+	
+	return 0;
+}
+
+
