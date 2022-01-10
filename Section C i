@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	int length, breadth,area,p;
+	cout<<"Enter length of rechtangle";
+	cin>>length;	
+	cout<<"Enter breadth of rechtangle";
+	cin>>breadth;
+	area=length*breadth;
+	p=2*(length+breadth);
+	if(area>p)
+	cout<<"Area is greater than perimeter";
+	else
+	cout<<"Area is less than perimeter";
+	return 0;
+}
+
+
+
