@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int yer;
+	
+	cout<<"Enter a year : ";
+	cin>>yer;
+	
+	yer % 4 ? cout<<yer <<"is a not a leap year.":cout<<yer <<"is a leap year.";
+}
