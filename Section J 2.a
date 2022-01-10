@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char chr;
+	cout<<"Enter a character : ";
+	cin>>chr;
+	chr < 123 && chr > 97 || chr > 64 && chr < 92 ? cout<<"Not a special symbol.": cout<<"Special symbol.";
+	return 0;
+}
