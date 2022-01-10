@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int ram,shyam,ajay;
+    cout<<"enter rams age";
+    cin>>ram;
+    cout<<"enter shayam age";
+    cin>>shyam;
+    cout<<"enter ajay age";
+    cin>>ajay;
+    if(ram>shyam)
+    {
+        if(shyam>ajay)
+        cout<<"ajay is the youngest";
+        else
+        cout<<"shyam is the youngest";
+    }
+    else
+    {
+		if(ram>ajay)
+        cout<<"ajay is the youngest";
+        else
+        cout<<"ram is the youngest";
+	}	
+		return 0;
+}
+
+
+
