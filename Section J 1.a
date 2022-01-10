@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char chr;
+	cout<<"Enter a character : ";
+	cin>>chr;
+	
+	chr > 96 && chr < 123 ? cout<<"Lower case alphabet.":cout<<"Not a lower case alphabet.";
+	
+	return 0;
+}
