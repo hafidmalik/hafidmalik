@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    
+int code ;
+
+	cin>>code ;
+	
+	code > 1 ? cout<<"\nJerusalem" : (code < 1 ? cout<<"\nEddie" : cout<<"\nC Brain");
+	
+	return 0;	
+    
+}
