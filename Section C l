@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+	int x,y;
+	cout<<"Enter the x-y coordinates of the point : ";
+	cin>>x>>y;
+	
+	if(x==0 && y==0)
+		cout<<"\n\nThe point is on the origin.";
+	if(x==0 && y!=0)
+		cout<<"\n\nThe point lie on the y-axis";
+	if(x!=0 && y==0)
+		cout<<"\n\nThe points lie on the x-axis";
+	if(x!=0 && y!=0)
+		cout<<"\n\nThe points lie on the plane";
+}
