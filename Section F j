@@ -1,0 +1,26 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+int stk,odr,crdt;
+	
+	cout<<"Hello!!\nThe price of our item is 100Rs. per item.\n ";
+	
+	cout<<"\nEnter the stock company have : ";
+	cin>>stk;
+	cout<<"\nEnter the quantity ordered : ";
+	cin>>odr;
+	cout<<"\nEnter the credit done by customer : ";
+	cin>>crdt;
+	
+	if(stk>=odr && crdt>=(100*odr))
+		cout<<"\n\nYour order has been placed successfully and will be delivered to you shortly.";
+	
+	if(stk>=odr && crdt<(100*odr))
+		cout<<"\nYour payment done is not sufficient for your ordered items.\nTry again!!";
+		
+	if(stk<odr && crdt>=(100*odr))
+		cout<<"\n\nWe have not sufficient items, but they will delivered to you shortly.";
+	
+}
