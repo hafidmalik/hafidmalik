@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+float h, c, t;
+float chrg;
+	int lat;
+	
+	cout<<"Enter the days you're late : ";
+	cin>>lat;
+	
+	if(lat<=5)
+	{
+	    chrg=0.50;
+		cout<<"\n\nYour library charges are Rs. "<< chrg;
+	}
+	if(lat>5 && lat<11)
+	{
+	    chrg=1.0;
+	    cout<<"\n\nYour library charges are Rs. "<< chrg;
+	}
+	if(lat>10 && lat<31)
+	{
+	    chrg=5.0;
+		cout<<"\n\nYour library charges are Rs. "<< chrg;
+	}
+	if(lat>30)
+		cout<<"\n\nYour library membership has been cancelled de to over delay to returning the book.";
+		
+	
+}
