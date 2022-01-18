@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int no, id,emp_count=0; 
+float rate,hours,gross_pay=0, payroll=0,net_pay, avg_amount,ot;
+char answer='n';
+		
+do{
+		cout << "Enter employee ID: " << endl;
+		cin >> id;
+
+		cout << "Enter number of hours worked: " << endl;
+		cin >> hours;
+
+		cout << "Enter hourly wage: " << endl;
+		cin >> rate;
+
+if(hours <= 40)
+{
+    gross_pay = rate * hours;
+    net_pay = gross_pay - (3.625 / gross_pay * 100);
+}
+else
+{
+    ot = hours*1.5*rate;
+    gross_pay = ot- (hours*rate);
+    net_pay=gross_pay- (3.625/gross_pay * 100);
+}
+
+    avg_amount = payroll / emp_count;
+	payroll += gross_pay;
+	emp_count++;
+	float tax = .03625f * gross_pay;
+	net_pay = gross_pay - tax;
+    cout << "Employee ID: " << id << endl;
+	cout << "Net pay: " << "$" << net_pay << endl;
+	cout << "Average amount paid: " << "$" << avg_amount << endl;
+	cout << "Total payroll: " << "$" << payroll << endl;
+
+cout << "Do you want to enter another employee? (y/n)?" << endl;
+		cin >> answer;
+
+
+	} while (answer == 'y');
+
+	cout<<"Total number of employees: "<< emp_count;
+        
+}
