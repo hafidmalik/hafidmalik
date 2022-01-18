@@ -1,0 +1,43 @@
+# include <iostream>
+# include <limits>
+#include <cmath>
+using namespace std;
+
+
+int main(){
+	int n;
+	cout << "Enter total number of of elements: " <<endl;
+	cin >> n;
+	int collection[n];
+	float sum = 0.0, mean = 0.0,squareSum=0.0,range=0.0;
+	
+	for ( int i=1; i <= n; i++ )
+	{
+		
+		cout << "Enter element " << i << " : ";
+		float now;
+		cin >> now;
+		collection[i-1]= now;
+	}
+	float smallest=collection[0],largest=collection[0];
+	for( int i=0; i < n; i++ ){
+		if ( collection[i] < smallest ){
+			smallest = collection[i];
+		}
+		if ( collection[i] > largest ){
+			largest = collection[i];
+		}
+		sum += collection[i];
+		squareSum += pow(collection[i], 2);
+	
+	}
+	
+	mean = sum / n;
+	range = largest - smallest;
+	int stdDev = sqrt((squareSum /n) - pow(mean, 2));
+	
+	
+	cout << "RANGE \tStandard deviation"  << endl;
+	cout << range << "\t\t" << stdDev << endl;
+	return 0;
+}
