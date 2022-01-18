@@ -1,0 +1,37 @@
+#include<iostream>
+#define SIZE 26
+using namespace std;
+int main()
+{
+int hot=0, pleasant=0, cold=0;
+int sum=0, i, temp;
+double average;
+for(i=0; i<SIZE; i++)
+ {
+ cout<<"Enter temperature" <<i+1;
+ cin>>temp;
+ sum +=temp;
+
+ if(temp >= 85)
+ {
+ cout<<temp <<"is a hot day\n";
+ ++hot;
+ }
+ else if(temp >= 60 && temp <= 84)
+ {
+ cout<<temp <<"is a pleasant day\n";
+ ++pleasant;
+ }
+ else
+ {
+ cout<<temp <<" is a cold day\n";
+ ++cold;
+ }
+ }
+average = (double) sum/SIZE;
+cout<<"The collection of hot days is"<< hot;
+cout<<"The collection of pleasant days is" <<pleasant;
+cout<<"The collection of cold days is "<<cold;
+cout<<"The average temperature is " <<average;
+return(0);
+}
