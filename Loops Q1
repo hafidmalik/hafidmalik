@@ -1,0 +1,37 @@
+# include <iostream>
+# include <limits>
+using namespace std;
+
+
+int main(){
+	int n;
+	cout << "Enter total number of of elements: " <<endl;
+	cin >> n;
+	int collection[n];
+	float sum = 0.0, mean = 0.0;
+	
+	for ( int i=1; i <= n; i++ )
+	{
+		
+		cout << "Enter element " << i << " : ";
+		float now;
+		cin >> now;
+		collection[i-1]= now;
+	}
+	float smallest=collection[0],largest=collection[0];
+	for( int i=0; i < n; i++ ){
+		if ( collection[i] < smallest ){
+			smallest = collection[i];
+		}
+		if ( collection[i] > largest ){
+			largest = collection[i];
+		}
+
+		sum += collection[i];
+	}
+	
+	mean = sum / n;
+	cout << "\nSMALLEST\tLARGEST \tMEAN" << endl;
+	cout << smallest << "\t\t" << largest << "\t\t" << mean << endl;
+	return 0;
+}
