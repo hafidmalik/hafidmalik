@@ -1,0 +1,18 @@
+#include<iostream> 
+using namespace std; 
+int main() 
+{ 
+ int guest,chair,fact=1; 
+ cout<<"Enter the number of guest:"; 
+ cin>>guest; 
+ cout<<endl; 
+ cout<<"Enter the number of chair:"; 
+ cin>>chair; 
+ cout<<endl; 
+ for(int i=0;i<chair;i++){ 
+ fact*=guest-i; 
+ } 
+ cout<<"Number of possible arrangements for any number of guests and any number of chairs:"<<fact; 
+ cout<<endl; 
+ return 0; 
+} 
