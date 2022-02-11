@@ -1,0 +1,57 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+ 
+bool isPal(char str[],
+              int s, int e)
+{
+     
+    // If there is only one character
+    if (s == e)
+    return 1;
+ 
+    // If first and last
+    // characters do not match
+    if (str[s] != str[e])
+    return 0;
+ 
+    // If there are more than
+    // two characters, check if
+    // middle substring is also
+    // palindrome or not.
+    if (s < e + 1)
+    return isPal(str, s + 1, e - 1);
+ 
+    return 1;
+}
+ 
+bool isPalindrome(char str[])
+{
+    int i,j;
+    char ch[50];
+        for( i=0, j=0; i<=strlen(str);i++){
+            if((str[i] !=' ') && (ispunct(str[i]) == false))
+                {ch[j]=tolower(str[i]);
+                j++;
+    }}
+    int n = strlen(ch);
+    str=ch;
+    // An empty string is
+    // considered as palindrome
+    if (n == 0)
+        return 1;
+     
+    return isPal(str, 0, n - 1);
+}
+int main()
+{
+    char str[50];
+    int x;
+    cout<<"Enter the string ";
+    cin.getline(str, 20);
+    x=isPalindrome(str);
+    if (x==1)
+    cout<<x;
+    
+    return 0;
+}
