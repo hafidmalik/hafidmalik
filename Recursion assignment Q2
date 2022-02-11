@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int f(int n) {
+    if (n <= 0) {
+            return 0;
+        } 
+    else {
+            return  f(n - 1) + 2;
+    }
+    return 0;
+}
+int main(void)
+{
+    int n, y;
+    cout<<"enter x";
+    cin>>n;
+    y=f(n);
+    cout<<y;
+    return 0;
+}
+
+
+
