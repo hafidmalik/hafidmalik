@@ -1,0 +1,28 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+bool isVowel(char ch)
+{
+    ch = toupper(ch);
+    return (ch=='A' || ch=='E' || ch=='I' ||
+                       ch=='O' || ch=='U');
+}
+ 
+int countVowels(char str[])
+{
+    int count = 0;
+    for (int i=0; i<strlen(str); i++)
+        if (isVowel(str[i]))
+            ++count;
+    return count;
+}
+ 
+int main()
+{
+    //string object
+    char str[50];
+    cout<<"Enter string ";
+    cin.getline(str,20);
+    cout <<"Total number of vowels "<< countVowels(str) << endl;
+    return 0;
+}
