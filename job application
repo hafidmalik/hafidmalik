@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Job Application </title>
+	<style>
+		* {
+			font-family: sans-serif, Arial, Laksaman;
+		}
+
+		form * {
+			padding: 5px;
+			outline:  none;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+		}
+		
+		input {
+			padding: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1> Job Application Form </h1>
+
+	<form action="submited.html">
+		<input type="text" name="appliedfor" placeholder="Applied For " autofocus/>
+		<input type="text" name="name" placeholder="Name " />
+		<input type="text" name="nat" placeholder="Nationality " />
+		<br>
+		<p> Your Date Of Birth </p>
+		<input type="date" name="date" /><br><br>
+		<textarea placeholder="Type your Address" rows="10" cols="50"></textarea><br><br>
+		<input type="tel" id="phone" name="phone" placeholder="Phone number" /><br><br>
+		<textarea placeholder="Enter your educational history and qualifications" rows="10" cols="50"></textarea><br><br>
+		<textarea placeholder="Enter your work experiance" rows="10" cols="50"></textarea><br><br>
+		<textarea placeholder="type your Personal statement" rows="10" cols="50"></textarea><br><br>
+
+		<div>
+			<input type="text" name="refree1-name" placeholder="Referee 1 name"/>
+			<input type="tel" name="refree1-phone" placeholder="Referee 1 phone"/>
+			<input type="email" name="refree1-email" placeholder="Referee 1 email"/>
+		</div>
+		<br>
+		<div>
+			<input type="text" name="refree2-name" 	placeholder="Referee 2 name"/>
+			<input type="tel" name="refree2-phone" 	placeholder="Referee 2 phone"/>
+			<input type="email" name="refree2-email" placeholder="Referee 2 email"/>
+		</div>
+		<br>
+		<input type="submit" name=""/>
+	</form>
+</body>
+</html>
