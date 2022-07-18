@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> A Simple Webpage </title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			/*overflow: hidden;*/
+			font-family: sans-serif, Arial, Laksaman;
+		}
+
+		#container {
+			height: 100%;
+			overflow: hidden;
+		}
+
+		#bg {
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			position: fixed;
+			z-index: -1;
+		}
+
+		.nav {
+			background: #00000030;
+			backdrop-filter:  blur(5px);
+			box-shadow: #00000050 0px 0px 2px 0px;
+		}
+
+		.nav ul {
+			display: flex;
+			gap: 50px;
+			padding: 20px;
+			list-style: none;
+			margin: 0;
+			align-content: center;
+		}
+
+		.nav ul li {
+			transition: 200ms ease;
+		}
+
+		#logo {
+			width: 30px;
+			height: 30px;
+		}
+
+		.nav ul li:hover {
+			transform: scale(1.1);
+		}
+
+		.nav ul li a {
+			text-decoration: none;
+			font-size: 1.5em;
+			color: #fff;
+		}
+
+		.form-like {
+			background: #00000050;
+			backdrop-filter: blur(3px);
+			color: #fff;
+			padding: 10px;
+			font-size: 1.2em;
+			user-select: none;
+			text-align: center;
+		}
+
+		.form-like input, select, #area {
+			padding: 7px;
+			border: #dddddd solid 1px;
+			border-radius: 5px;
+			background: #00000050;
+			color: #fff;
+		}
+
+		.form-like span {
+			font-size: 0.9em;
+			margin: 0 5px;
+		}
+
+		.form-like input[type='button']{
+			cursor: pointer;
+		}
+
+		.form-like #area {
+			width: calc( 200px + 30% );
+		}
+
+		input::placeholder {
+			color: #ffffff50;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<img id="bg" src="https://images.pexels.com/photos/2739013/pexels-photo-2739013.jpeg" alt="BG"/>
+		<div class="nav">
+			<ul>
+				<img id="logo" src="https://img.icons8.com/color/344/confluence--v2.png" alt="Logo"/>
+				<li><a href="#"> Home </a></li>
+				<li><a href="#"> Products </a></li>
+				<li><a href="#"> Offering </a></li>
+				<li><a href="#"> About </a></li>
+				
+			</ul>
+		</div>
+		<div class="form-like">
+			<form action="submited.html">
+				<h3> Implementation of all HTML elements </h3>
+				<input placeholder="Name" type="text" name="name"/>
+				<input placeholder="Email" type="email" name="name"/>
+				<input placeholder="Phone" type="tel" name="name"/>
+				<br><br>
+				<p> Select Your Favorite color </p>
+				<select>
+					<option> Blue </option>
+					<option> Voilet </option>
+					<option> Deep Pink </option>
+				</select><br><br>
+
+				<p> Are you interested in Computer Science? </p>
+				<input type="radio" name="int-1"><span>Yes</span></input>
+				<input type="radio" name="int-1"><span>No</span></input>
+
+				<br><br>
+				<p> Please Select Your Favorite Subjects </p>
+				<input type="checkbox" name="math" checked> <span>Math</span> </input>
+				<input type="checkbox" name="math"> <span>Science</span></input>
+				<input type="checkbox" name="math"> <span>History</span></input>
+
+				<br><br>
+				<p> Please Enter your postal code </p>
+				<input type="number" name="postcode" placeholder="101011" />
+
+				<br><br>
+				<p> Please Enter your comments bellow </p>
+				<textarea id="area" rows="5" placeholder="Your Comments"></textarea>
+				<br><br>
+				<input type="submit" style="cursor: pointer;" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>
